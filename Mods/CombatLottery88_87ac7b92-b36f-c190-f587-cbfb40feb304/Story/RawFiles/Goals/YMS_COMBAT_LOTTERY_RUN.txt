@@ -3,54 +3,36 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
+// When a player enters combat with the "COMBAT_LOTTERY_ON" status,
+// generate a random delay and launch a timer for that player.
+// Also, increment the global combat lottery participation counter.
 IF
 EnteredCombat(_Player, _CombatID)
 AND
 HasActiveStatus(_Player, "COMBAT_LOTTERY_ON", 1)
 AND
-DB_GlobalCounter("Combat_Lottery_Counter", _Count)
-AND
-DB_GlobalCounter("Combat_Lottery_Max_Char", _MaxChar)
-AND
-IntegerToString(_Count,_CountString)
-AND
-IntegerToString(_MaxChar,_MaxCharString)
-AND
-Concatenate("Combat Lottery: ", _CountString, _ResultString1)
-AND
-Concatenate(_ResultString1, " / ", _ResultString2)
-AND
-Concatenate(_ResultString2, _MaxCharString, _ResultString3)
-AND
-_Count <= _MaxChar
+Random(100, _Random)
 THEN
+RealtimeObjectTimerLaunch(_Player, "Combat_Lottery_Random_Delay", _Random);
 PROC_IncreaseCounter("Combat_Lottery_Counter");
-DebugText(_Player, _ResultString3);
 
+// When the player's random delay timer ends,
+// check if the total participant count exceeds the maximum allowed.
+// If it does, remove the player from the stage and decrease the counter.
 IF
-EnteredCombat(_Player, _CombatID)
-AND
-HasActiveStatus(_Player, "COMBAT_LOTTERY_ON", 1)
+ObjectTimerFinished((CHARACTER)_Player, "Combat_Lottery_Random_Delay")
 AND
 DB_GlobalCounter("Combat_Lottery_Counter", _Count)
 AND
 DB_GlobalCounter("Combat_Lottery_Max_Char", _MaxChar)
-AND
-IntegerToString(_Count,_CountString)
-AND
-IntegerToString(_MaxChar,_MaxCharString)
-AND
-Concatenate("Combat Lottery: ", _CountString, _ResultString1)
-AND
-Concatenate(_ResultString1, " / ", _ResultString2)
-AND
-Concatenate(_ResultString2, _MaxCharString, _ResultString3)
 AND
 _Count > _MaxChar
 THEN
 SetOnStage(_Player,0);
-DebugText(_Player, _ResultString3);
+PROC_DecreaseCounter("Combat_Lottery_Counter");
 
+// When the combat ends, and the player was in that combat with the "COMBAT_LOTTERY_ON" status,
+// reset the participation counter and make sure the player is placed back on stage.
 IF
 CombatEnded(_CombatID)
 AND
@@ -59,24 +41,9 @@ AND
 IsInCombat((CHARACTER)_Player, 0)
 AND
 HasActiveStatus(_Player, "COMBAT_LOTTERY_ON", 1)
-AND
-DB_GlobalCounter("Combat_Lottery_Counter", _Count)
-AND
-DB_GlobalCounter("Combat_Lottery_Max_Char", _MaxChar)
-AND
-IntegerToString(_Count,_CountString)
-AND
-IntegerToString(_MaxChar,_MaxCharString)
-AND
-Concatenate("Combat Lottery: ", _CountString, _ResultString1)
-AND
-Concatenate(_ResultString1, " / ", _ResultString2)
-AND
-Concatenate(_ResultString2, _MaxCharString, _ResultString3)
 THEN
 PROC_RemoveCounter("Combat_Lottery_Counter");
 PROC_DeclareCounter("Combat_Lottery_Counter");
-DebugText(_Player, _ResultString3);
 SetOnStage(_Player,1);
 EXITSECTION
 
