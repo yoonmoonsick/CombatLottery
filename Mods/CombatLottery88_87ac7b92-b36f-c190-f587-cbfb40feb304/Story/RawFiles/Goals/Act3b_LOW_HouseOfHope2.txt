@@ -3640,7 +3640,6 @@ AND
 QRY_LOW_HouseOfHope_PlayersNotGathered()
 THEN
 DB_CustomUseItemResponse(_Player, S_LOW_DevilsFee_ReceivingPortalHoH_e87812da-a916-4d8c-bef7-73040524e587, 0);
-OpenMessageBox(_Player, "LOW_HouseOfHope_GatherParty");
 //PROC_TryStartAD(LOW_HouseOfHope_AD_CantUsePortal_74c877b7-60e2-54dc-e30b-3dbd0b3b95a1, S_LOW_DevilsFee_ReceivingPortalHoH_e87812da-a916-4d8c-bef7-73040524e587);
 
 PROC
