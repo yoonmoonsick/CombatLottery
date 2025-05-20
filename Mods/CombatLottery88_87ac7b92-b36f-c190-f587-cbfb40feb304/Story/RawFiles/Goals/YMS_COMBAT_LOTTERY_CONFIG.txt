@@ -1,0 +1,73 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+// When the caster uses a specific "Shout_AdjustParticipantCount_X" spell, reset and set the Combat Lottery Max Character counter
+// to a specific value based on the spell used, then notify the caster with a message box.
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_1",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",1);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 1");
+
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_2",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",2);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 2");
+
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_3",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",3);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 3");
+
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_4",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",4);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 4");
+
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_5",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",5);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 5");
+
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_6",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",6);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 6");
+
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_7",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",10);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 10");
+
+IF
+CastedSpell(_Caster,"Shout_AdjustParticipantCount_8",_,_,_)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Max_Char");
+PROC_DeclareCounter("Combat_Lottery_Max_Char");
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",16);
+OpenMessageBox((CHARACTER)_Caster, "Combat Lottery Member: 16");
+EXITSECTION
+
+ENDEXITSECTION

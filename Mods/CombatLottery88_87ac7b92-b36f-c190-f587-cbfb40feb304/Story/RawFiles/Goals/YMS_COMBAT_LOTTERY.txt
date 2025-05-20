@@ -1,0 +1,72 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_CombatLottery_Initialized(0);
+KBSECTION
+// Check if the level has loaded and the combat lottery has not been initialized yet
+IF
+LevelLoaded(_)
+AND
+DB_CombatLottery_Initialized(0)
+THEN
+TimerLaunch("CombatLottery_InitDelay", 0); // Start a timer named "CombatLottery_InitDelay" with no delay
+
+// When the "CombatLottery_InitDelay" timer finishes
+IF
+TimerFinished("CombatLottery_InitDelay")
+THEN
+NOT DB_CombatLottery_Initialized(0); // Remove flag indicating uninitialized state
+DB_CombatLottery_Initialized(1);     // Set flag to mark combat lottery as initialized
+
+// When a player exists and combat lottery has been initialized
+IF
+DB_Players(_Player)
+AND
+DB_CombatLottery_Initialized(1)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Counter");      // Remove existing "Combat_Lottery_Counter" counter
+PROC_DeclareCounter("Combat_Lottery_Counter");     // Declare a new "Combat_Lottery_Counter"
+PROC_RemoveCounter("Combat_Lottery_Max_Char");     // Remove existing max character counter
+PROC_DeclareCounter("Combat_Lottery_Max_Char");    // Declare new max character counter
+PROC_IncreaseCounter("Combat_Lottery_Max_Char",4); // Set max character counter to 4
+SetMaxPartySizeOverride(16);                       // Override party size limit to 16
+
+// When a player is in the player database, is a valid party member, is not a summon/follower,
+// the combat lottery is initialized, and does not have the passive yet
+IF
+DB_Players((CHARACTER)_Player)
+AND
+QRY_IsPartyMember(_Player,0)
+AND NOT
+QRY_IsSummonOrPartyFollower(_Player)
+AND
+DB_CombatLottery_Initialized(1)
+AND
+HasPassive(_Player, "ToggleCombatLottery", 0)
+THEN
+AddPassive(_Player, "ToggleCombatLottery"); // Give the player the "ToggleCombatLottery" passive
+
+// When a character joins the party, is not a summon/follower,
+// combat lottery is initialized, and does not already have the passive
+IF
+CharacterJoinedParty(_Player)
+AND NOT
+QRY_IsSummonOrPartyFollower(_Player)
+AND
+DB_CombatLottery_Initialized(1)
+AND
+HasPassive(_Player, "ToggleCombatLottery", 0)
+THEN
+AddPassive(_Player, "ToggleCombatLottery"); // Grant the passive upon joining party
+
+
+
+
+
+
+
+
+
+EXITSECTION
+
+ENDEXITSECTION

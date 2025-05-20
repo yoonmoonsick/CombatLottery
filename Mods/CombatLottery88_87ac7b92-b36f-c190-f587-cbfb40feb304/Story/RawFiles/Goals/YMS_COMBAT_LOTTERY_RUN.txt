@@ -1,0 +1,83 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+EnteredCombat(_Player, _CombatID)
+AND
+HasActiveStatus(_Player, "COMBAT_LOTTERY_ON", 1)
+AND
+DB_GlobalCounter("Combat_Lottery_Counter", _Count)
+AND
+DB_GlobalCounter("Combat_Lottery_Max_Char", _MaxChar)
+AND
+IntegerToString(_Count,_CountString)
+AND
+IntegerToString(_MaxChar,_MaxCharString)
+AND
+Concatenate("Combat Lottery: ", _CountString, _ResultString1)
+AND
+Concatenate(_ResultString1, " / ", _ResultString2)
+AND
+Concatenate(_ResultString2, _MaxCharString, _ResultString3)
+AND
+_Count <= _MaxChar
+THEN
+PROC_IncreaseCounter("Combat_Lottery_Counter");
+DebugText(_Player, _ResultString3);
+
+IF
+EnteredCombat(_Player, _CombatID)
+AND
+HasActiveStatus(_Player, "COMBAT_LOTTERY_ON", 1)
+AND
+DB_GlobalCounter("Combat_Lottery_Counter", _Count)
+AND
+DB_GlobalCounter("Combat_Lottery_Max_Char", _MaxChar)
+AND
+IntegerToString(_Count,_CountString)
+AND
+IntegerToString(_MaxChar,_MaxCharString)
+AND
+Concatenate("Combat Lottery: ", _CountString, _ResultString1)
+AND
+Concatenate(_ResultString1, " / ", _ResultString2)
+AND
+Concatenate(_ResultString2, _MaxCharString, _ResultString3)
+AND
+_Count > _MaxChar
+THEN
+SetOnStage(_Player,0);
+DebugText(_Player, _ResultString3);
+
+IF
+CombatEnded(_CombatID)
+AND
+DB_Players(_Player)
+AND
+IsInCombat((CHARACTER)_Player, 0)
+AND
+HasActiveStatus(_Player, "COMBAT_LOTTERY_ON", 1)
+AND
+DB_GlobalCounter("Combat_Lottery_Counter", _Count)
+AND
+DB_GlobalCounter("Combat_Lottery_Max_Char", _MaxChar)
+AND
+IntegerToString(_Count,_CountString)
+AND
+IntegerToString(_MaxChar,_MaxCharString)
+AND
+Concatenate("Combat Lottery: ", _CountString, _ResultString1)
+AND
+Concatenate(_ResultString1, " / ", _ResultString2)
+AND
+Concatenate(_ResultString2, _MaxCharString, _ResultString3)
+THEN
+PROC_RemoveCounter("Combat_Lottery_Counter");
+PROC_DeclareCounter("Combat_Lottery_Counter");
+DebugText(_Player, _ResultString3);
+SetOnStage(_Player,1);
+EXITSECTION
+
+ENDEXITSECTION
