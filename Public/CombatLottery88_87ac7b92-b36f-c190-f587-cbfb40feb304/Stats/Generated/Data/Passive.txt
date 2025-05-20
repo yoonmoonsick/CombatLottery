@@ -1,0 +1,8 @@
+new entry "ToggleCombatLottery"
+type "PassiveData"
+data "DisplayName" "h1d34b633gbc1bgc22dg661ag140ebcff3291;4"
+data "Icon" "PassiveFeature_Portent"
+data "Properties" "IsToggled;ToggledDefaultOn;ToggledDefaultAddToHotbar"
+data "ToggleOnFunctors" "ApplyStatus(COMBAT_LOTTERY_ON,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(COMBAT_LOTTERY_ON)"
+

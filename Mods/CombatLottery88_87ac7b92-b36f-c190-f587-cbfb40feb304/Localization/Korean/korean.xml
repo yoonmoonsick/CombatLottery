@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
 <contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <content contentuid="h81c869c5g577dg393ag18e1gb89f4aae2765" version="1">참여 인원 조정정</content>
+  <content contentuid="h81c869c5g577dg393ag18e1gb89f4aae2765" version="1">참여 인원 조정</content>
+  <content contentuid="h1d34b633gbc1bgc22dg661ag140ebcff3291" version="2">전투 추첨 토글</content>
+  <content contentuid="h73f3ef9bg348fg0ffag205dge548b4315679" version="1">전투 추첨</content>
+  <content contentuid="h93c1c31bg264bg2fcegdcc4g5d729fb78b6c" version="1">이 캐릭터는 무작위로 전투에서 제외됩니다.</content>
 </contentList>

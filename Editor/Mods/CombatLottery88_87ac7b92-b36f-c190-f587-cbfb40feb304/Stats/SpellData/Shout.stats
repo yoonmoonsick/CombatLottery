@@ -6,11 +6,17 @@
         <field name="UUID" type="IdTableFieldDefinition" value="8930f746-b655-4b6a-a928-c8b4e50273df" />
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount" />
         <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_AdjustParticipantCount_1;Shout_AdjustParticipantCount_2;Shout_AdjustParticipantCount_3;Shout_AdjustParticipantCount_4;Shout_AdjustParticipantCount_5;Shout_AdjustParticipantCount_6;Shout_AdjustParticipantCount_7;Shout_AdjustParticipantCount_8;" />
-        <field name="Autocast" type="EnumerationTableFieldDefinition" value="Yes" enumeration_type_name="YesNo" version="1" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h81c869c5g577dg393ag18e1gb89f4aae2765" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsLinkedSpellContainer;IgnoreSilence;ImmediateCast;Stealth;NoCameraMove;Invisible" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsLinkedSpellContainer;IgnoreSilence;Stealth;NoCameraMove;Invisible" enumeration_type_name="SpellFlagList" version="1" />
         <field name="Requirements" type="StringTableFieldDefinition" value="!Combat" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c00ac126-d7ad-421b-b79a-23f49efefcf6" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="UseCosts" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellCategory" type="EnumerationListTableFieldDefinition" clear_inherited_value="true" value="SC_DetectThoughts" enumeration_type_name="SpellCategoryFlags" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -21,7 +27,7 @@
         <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_AdjustParticipantCount" />
         <field name="ContainerSpells" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;ImmediateCast;Stealth;NoCameraMove;Invisible" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;Stealth;NoCameraMove;Invisible" enumeration_type_name="SpellFlagList" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

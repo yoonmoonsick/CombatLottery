@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="3e76b74c-a5ae-4268-944a-aa9c31e2185e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3511265c-7f97-424d-92e0-81a06d9d8693" />
+        <field name="Name" type="NameTableFieldDefinition" value="ToggleCombatLottery" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h1d34b633gbc1bgc22dg661ag140ebcff3291" version="4" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsToggled;ToggledDefaultOn;ToggledDefaultAddToHotbar" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="ToggleOnFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(COMBAT_LOTTERY_ON,100,-1)" />
+        <field name="ToggleOffFunctors" type="FunctorsTableFieldDefinition" value="RemoveStatus(COMBAT_LOTTERY_ON)" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

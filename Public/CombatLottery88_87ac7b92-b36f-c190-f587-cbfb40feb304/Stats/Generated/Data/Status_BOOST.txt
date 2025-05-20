@@ -1,0 +1,9 @@
+new entry "COMBAT_LOTTERY_ON"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h73f3ef9bg348fg0ffag205dge548b4315679;1"
+data "Description" "h93c1c31bg264bg2fcegdcc4g5d729fb78b6c;1"
+data "Icon" "PassiveFeature_Portent"
+data "Boosts" "UnlockSpell(Shout_AdjustParticipantCount);"
+data "StatusPropertyFlags" "ForceOverhead;IgnoreResting;ApplyToDead"
+
