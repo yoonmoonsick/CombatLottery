@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="9fd4ac7a-fad7-424f-83df-0893eae93c38">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8930f746-b655-4b6a-a928-c8b4e50273df" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount" />
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_AdjustParticipantCount_1;Shout_AdjustParticipantCount_2;Shout_AdjustParticipantCount_3;Shout_AdjustParticipantCount_4;Shout_AdjustParticipantCount_5;Shout_AdjustParticipantCount_6;Shout_AdjustParticipantCount_7;Shout_AdjustParticipantCount_8;" />
+        <field name="Autocast" type="EnumerationTableFieldDefinition" value="Yes" enumeration_type_name="YesNo" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h81c869c5g577dg393ag18e1gb89f4aae2765" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsLinkedSpellContainer;IgnoreSilence;ImmediateCast;Stealth;NoCameraMove;Invisible" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="Requirements" type="StringTableFieldDefinition" value="!Combat" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_1" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8930f746-b655-4b6a-a928-c8b4e50273df" />
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_AdjustParticipantCount" />
+        <field name="ContainerSpells" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;ImmediateCast;Stealth;NoCameraMove;Invisible" enumeration_type_name="SpellFlagList" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="401b5a92-76e8-4ed8-ac2d-abf18e2de2aa" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_2" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="df7c016c-7ab8-4bef-b46e-4bf88f76a568" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_3" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9b7d149b-1faf-4eb3-bc7b-e94bef10e4eb" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="efde6953-4dbe-4e3e-9df1-1c317a8dcc0b" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_5" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="44113351-8ed6-4bfc-9dfc-94a3b7c7a4f3" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_6" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b0a780ba-d6fb-441d-9a6b-a7382b9212c6" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_7" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_10" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="360c60cd-9812-4c1f-9f4b-9fe8aa9a31f6" />
+        <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_8" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_16" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>
