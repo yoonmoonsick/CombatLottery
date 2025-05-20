@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="100"/>
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="GameProject" type="LSString" value=""/>
+            <attribute id="Module" type="LSString" value="87ac7b92-b36f-c190-f587-cbfb40feb304"/>
+            <attribute id="Name" type="LSString" value="Combat Lottery 2"/>
+            <attribute id="UUID" type="LSString" value="d9a6d047-e371-8ae5-e517-f3705a90a918"/>
+            <attribute id="UpdatedDependencies" type="bool" value="true"/>
+            <children>
+                <node id="Categories"/>
+            </children>
+        </node>
+    </region>
+</save>
