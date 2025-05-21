@@ -16,7 +16,8 @@
         <field name="TooltipStatusApply" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="UseCosts" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
-        <field name="SpellCategory" type="EnumerationListTableFieldDefinition" clear_inherited_value="true" value="SC_DetectThoughts" enumeration_type_name="SpellCategoryFlags" version="1" />
+        <field name="SpellCategory" type="EnumerationListTableFieldDefinition" clear_inherited_value="true" value="" enumeration_type_name="SpellCategoryFlags" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" clear_inherited_value="true" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -28,6 +29,7 @@
         <field name="ContainerSpells" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_1" />
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;Stealth;NoCameraMove;Invisible" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h77ecc201g17d7g5898ga532g04d336efe8f6" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -36,6 +38,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_2" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hbd0a16f6gc7a5gb7b6g7d97g247c25f948c1" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -44,6 +47,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_3" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_3" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h9fad0fb2g772cg3547g3ab4g0ba22a852807" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -52,6 +56,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_4" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_4" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hd9f9d2fdg0b02gfb9fge1fag529d2b944108" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -60,6 +65,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_5" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_5" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha9e0c760g3ea3g4d66g4373gb507fdc96bec" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -68,6 +74,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_6" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_6" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hde218aa6g5c8eg5921g5b86gb80f9b51cd62" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -76,6 +83,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_7" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_10" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h2cd3da97g6333g2730gdd5cgb4bb72b0a459" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -84,6 +92,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="AdjustParticipantCount_8" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d8c60bd9-01bb-4b03-9bc2-ae816d4a4d08" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Portent_16" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h6f5c7f8cgfb81g7409ga993g027c814ff91c" version="1" />
       </fields>
     </stat_object>
   </stat_objects>
