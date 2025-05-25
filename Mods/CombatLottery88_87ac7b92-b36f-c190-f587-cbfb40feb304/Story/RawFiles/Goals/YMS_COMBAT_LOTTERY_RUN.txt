@@ -45,6 +45,15 @@ THEN
 PROC_RemoveCounter("Combat_Lottery_Counter");
 PROC_DeclareCounter("Combat_Lottery_Counter");
 SetOnStage(_Player,1);
+
+IF
+Died(_Player)
+AND
+DB_Players(_Player)
+AND
+HasActiveStatus(_Player, "COMBAT_LOTTERY_ON", 1)
+THEN
+PROC_DecreaseCounter("Combat_Lottery_Counter");
 EXITSECTION
 
 ENDEXITSECTION
